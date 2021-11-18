@@ -1,0 +1,141 @@
+
+<html lang="en">
+    <head>
+        <title>Royal Honey Taste 
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="honey.css" >
+        
+        <script language="JavaScript1.2">
+//configure message
+message="Enjoy The Taste Of  Real Honey With"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+        
+        
+    </head>
+    <body>
+        
+        <h2><div id="jumpx"  style="color:brown; text-align: center; font-size: 1.5em"></div></h2>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+        <div id="wrapper" >
+        
+        <header>
+            <h1>Royal Honey Taste</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li> 
+                <li><a href="recipe.html">recipes</a></li>  
+                <li><a href="health_benefits.html">health benefits</a> </li>
+                <li><a href="product.html">products</a> </li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            
+        </nav>
+            <div id="farm">
+            </div>
+        
+        
+        <main>
+            <h2>About our honey</h2>
+            <p>
+                  We make organic wild flower honey by natural beekeeping practices.
+                Our pure and organic  honey contains vitamins, minerals, pollen, and natural antibiotics. We have never filtered or pasteurized our honey. Our pure and local honey has never blended with foreign honey.<br>
+            </p>
+            <p>
+                  Because of our natural beekeeping practices, we never use drugs or chemicals inside the hives.<br>
+            </p>
+            <p>
+                Our farm is specially planted with flowers such as lavender, thyme, and other flowers that are good for  the bees and human's health.
+                
+            </p>
+            
+           
+        </main>
+        <footer>
+            Copyright &copy; 2021 Royal Sweet Honey<br>
+                <a href="mailto:ali.darabi1@gmail.com">Email me for more information</a>
+                
+            
+            
+        </footer>
+            </div>
+    </body>
+</html>
